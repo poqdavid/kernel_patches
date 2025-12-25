@@ -77,7 +77,7 @@ index aad03b92..f5b14087 100644
  		break;
  	}
  	default: {
-@@ -884,18 +914,23 @@ void ksu_supercalls_init(void)
+@@ -941,20 +941,24 @@ void ksu_supercalls_init(void)
          pr_info("  %-18s = 0x%08x\n", ksu_ioctl_handlers[i].name,
                  ksu_ioctl_handlers[i].cmd);
      }
@@ -89,7 +89,9 @@ index aad03b92..f5b14087 100644
  	} else {
  		pr_info("reboot kprobe registered successfully\n");
  	}
+-
 +#endif // #ifndef CONFIG_KSU_SUSFS
+     sulog_init_heap(); // grab heap memory
  }
  
  void ksu_supercalls_exit(void)
